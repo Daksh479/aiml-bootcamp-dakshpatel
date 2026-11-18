@@ -1,21 +1,11 @@
-# counts how many times each word appears in a sentence
+# Given a list of numbers, use a comprehension to return only the even ones, each doubled.
 
-def count(sentence):
-    words = sentence.lower().split()
-
-    word_count = {}
-
-    for word in words:
-        if word in word_count:
-            word_count[word] += 1
-        else:
-            word_count[word] = 1
-
-    return word_count
+def even(numbers):
+    return [x * 2 for x in numbers if x % 2 == 0]
 
 
-text = "return a dict"
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-result = count(text)
+result = even(numbers)
 
 print(result)
