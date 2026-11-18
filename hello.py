@@ -1,11 +1,11 @@
-# Given a list of numbers, use a comprehension to return only the even ones, each doubled.
+# return the unique and sorted item
 
-def even(numbers):
-    return [x * 2 for x in numbers if x % 2 == 0]
+def unique(numbers):
+    return sorted(set(numbers))
 
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers = [5, 2, 8, 2, 1, 5, 9, 3, 1, 6, 6, 4, 1, 3]
 
-result = even(numbers)
+result = unique(numbers)
 
 print(result)
