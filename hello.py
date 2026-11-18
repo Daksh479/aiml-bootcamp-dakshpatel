@@ -1,21 +1,13 @@
-# FizzBuzzBuzz (new version)
+# reverse a sring
 
-for i in range(1, 101):
+def reverse(sentence):
+    words = sentence.split()
+    reversed_words = words[::-1]
+    return " ".join(reversed_words)
 
-    if i % 3 == 0 and i % 5 == 0 and 1 % 7 == 0:
-        print("FizzBuzzBuzz")
 
-    elif i % 3 == 0 and i % 5 == 0:
-            print("FizzBuzz")
+text = "the cat sat"
 
-    elif i % 3 == 0:
-        print("Fizz")
+result = reverse(text)
 
-    elif i % 5 == 0:
-        print("Buzz")
-
-    elif i % 7 == 0:
-         print("Buzz")
-
-    else:
-        print(i)
+print(result)
