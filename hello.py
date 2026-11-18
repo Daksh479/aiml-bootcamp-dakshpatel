@@ -1,11 +1,10 @@
-# return the unique and sorted item
+# palindrome
 
-def unique(numbers):
-    return sorted(set(numbers))
+def palindrome(text):
+    if text == text[::-1]:
+        return "Palindrome"
+    else:
+        return "Not Palindrome"
 
 
-numbers = [5, 2, 8, 2, 1, 5, 9, 3, 1, 6, 6, 4, 1, 3]
-
-result = unique(numbers)
-
-print(result)
+print(palindrome("madam"))
