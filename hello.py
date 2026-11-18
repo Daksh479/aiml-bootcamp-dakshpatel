@@ -1,13 +1,21 @@
-# reverse a sring
+# counts how many times each word appears in a sentence
 
-def reverse(sentence):
-    words = sentence.split()
-    reversed_words = words[::-1]
-    return " ".join(reversed_words)
+def count(sentence):
+    words = sentence.lower().split()
+
+    word_count = {}
+
+    for word in words:
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+
+    return word_count
 
 
-text = "the cat sat"
+text = "return a dict"
 
-result = reverse(text)
+result = count(text)
 
 print(result)
