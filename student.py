@@ -1,35 +1,20 @@
-# student data 
-
 class Student:
 
-    def __init__(self, name, roll):
+    def __init__(self, name, roll_no, marks):
         self.name = name
-        self.roll = roll
-        self.marks = []
+        self.roll_no = roll_no
+        self.marks = marks
 
-    def add_mark(self, score):
-        self.marks.append(score)
+    def __str__(self):
+        return f"Student Name: {self.name}, Roll No: {self.roll_no}, Marks: {self.marks}"
 
-    def average(self):
-        if not self.marks:
-            return 0
-
-        return sum(self.marks) / len(self.marks)
-
-    def highest(self):
-        if not self.marks:
-            return None
-
-        return max(self.marks)
-
-    def lowest(self):
-        if not self.marks:
-            return None
-
-        return min(self.marks)
+    def __repr__(self):
+        return f"Student(name={self.name!r}, roll_no={self.roll_no}, marks={self.marks})"
 
 
+s1 = Student("Rahul", 101, 85)
+s2 = Student("Priya", 102, 92)
 
-student1 = Student("Rahul", 101)
-student2 = Student("Amit", 102)
-student3 = Student("Priya", 103)
+students = [s1, s2]
+
+print(students)
