@@ -1,26 +1,21 @@
-# Read a big file without loading it
-with open("large_file.txt", "w") as file:
+# Debug the code
+def class_average(students, passing = 40):
+    total = 0
+    passed = 0
+    for s in students:
+        total += s["marks"]
+        if s["marks"] >= passing:
+            passed += 1
+    average = total / len(students)
+    pass_rate = passed / len(students) * 100
+    return average, pass_rate
 
-    for i in range(1, 500001):
-        file.write(
-            f"This is line number {i}. Python is awesome.\n"
-        )
-
-print("File generated successfully!")
-
-word = "Python"
-
-total_lines = 0
-matching_lines = 0
-
-with open("large_file.txt", "r") as file:
-
-    for line in file:
-
-        total_lines += 1
-
-        if word in line:
-            matching_lines += 1
-
-print("Total lines:", total_lines)
-print("Lines containing word:", matching_lines)
+data = [
+    {"name": "asha", "marks": 88},
+    {"name": "ravi", "marks": 92},
+    {"name": "meera", "marks": 79},
+    {"name": "dev", "marks": 40},
+]
+avg, rate = class_average(data)
+print(f"average: {avg}") 
+print(f"pass rate: {rate}%") 
