@@ -1,33 +1,26 @@
-# Write fib_list(n) that returns the first n Fibonacci numbers as a list.
-def fib_list(n):
-    result = []
+# Read a big file without loading it
+with open("large_file.txt", "w") as file:
 
-    a = 0
-    b = 1
+    for i in range(1, 500001):
+        file.write(
+            f"This is line number {i}. Python is awesome.\n"
+        )
 
-    for i in range(n):
-        result.append(a)
+print("File generated successfully!")
 
-        a, b = b, a + b
+word = "Python"
 
-    return result
+total_lines = 0
+matching_lines = 0
 
-numbers = fib_list(10)
+with open("large_file.txt", "r") as file:
 
-print(numbers)
+    for line in file:
 
-#  Write fib_gen(n) that does the same with yield.
+        total_lines += 1
 
-def fib_gen(n):
-    a = 0
-    b = 1
+        if word in line:
+            matching_lines += 1
 
-    for i in range(n):
-        yield a
-
-        a, b = b, a + b
-
-numbers = fib_gen(10)
-
-for num in numbers:
-    print(num)
+print("Total lines:", total_lines)
+print("Lines containing word:", matching_lines)
