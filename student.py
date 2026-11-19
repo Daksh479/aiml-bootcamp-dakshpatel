@@ -1,20 +1,33 @@
-class Student:
-
-    def __init__(self, name, roll_no, marks):
+# Inheritance
+class Person:
+    def __init__(self, name):
         self.name = name
-        self.roll_no = roll_no
-        self.marks = marks
 
-    def __str__(self):
-        return f"Student Name: {self.name}, Roll No: {self.roll_no}, Marks: {self.marks}"
+    def greet(self):
+        print(f"Hello, My name is {self.name}")
 
-    def __repr__(self):
-        return f"Student(name={self.name!r}, roll_no={self.roll_no}, marks={self.marks})"
+class Student(Person):
+    def __init__(self, name, roll):
+        super().__init__(name)
+        self.roll = roll
+
+    def greet(self):
+        print(f"Hi, I am {self.name}. My roll number is {self.roll}")
 
 
-s1 = Student("Rahul", 101, 85)
-s2 = Student("Priya", 102, 92)
+class Teacher(Person):
+    def __init__(self, name, subject):
+        super().__init__(name)
+        self.subject = subject
 
-students = [s1, s2]
+person = Person("Daksh")
+student = Student("Amit", 50)
+teacher = Teacher("Priya", "Python")
 
-print(students)
+person.greet()
+student.greet()
+teacher.greet()
+
+
+print("Student Roll:", student.roll)
+print("Teacher Subject:", teacher.subject)
