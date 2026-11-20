@@ -1,0 +1,11 @@
+Python is a powerful programming language.
+Python is easy to learn and easy to use.
+Programming helps people solve real-world problems.
+
+Machine learning is a branch of artificial intelligence.
+Machine learning uses data to train models.
+Python is widely used in machine learning because it is simple and powerful.
+
+Data science uses Python to analyze data.
+Python provides libraries for data analysis and visualization.
+Data analysis helps businesses make better decisions.
